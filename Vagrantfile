@@ -10,5 +10,5 @@ Vagrant.configure(2) do |config|
     v.memory = 2048
     v.cpus = 2
   end
-  config.vm.provision "shell", path: "script.sh"
+  config.vm.provision "shell", path: "bootstrap.sh"
 end

@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 
-apt-get install -y httpd java-1.8.0-openjdk-devel nano unzip tar wget git
+yum install -y httpd java-1.8.0-openjdk-devel nano unzip tar wget git
 
-https://downloads.typesafe.com/typesafe-activator/1.3.9/typesafe-activator-1.3.9-minimal.zip
+cd /vagrant 
 
-unzip typesafe-activator-1.3.9-minimal.zip
+wget https://downloads.typesafe.com/typesafe-activator/1.3.10/typesafe-activator-1.3.10-minimal.zip
 
-mv activator-1.3.9-minimal /usr/local/activator
+unzip typesafe-activator-1.3.10-minimal.zip
+
+mv activator-1.3.10-minimal /usr/local/activator
 
 ln -s /usr/local/activator/bin/activator /usr/local/bin
 
-rm typesafe-activator-1.3.9-minimal.zip
-
-cd /vagrant 
+rm typesafe-activator-1.3.10-minimal.zip
 
 git clone https://github.com/NYU-ACM/acmwebtools
